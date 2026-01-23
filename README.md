@@ -1,3 +1,2 @@
 ## Learning Progress
-- Day 1: const, let, var
-       : data types
+- Day 1: const, let, var, data types, conversionOperations
