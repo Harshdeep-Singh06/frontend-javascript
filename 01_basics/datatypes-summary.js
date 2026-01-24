@@ -33,3 +33,33 @@ const myFunction = function(){  //Function type function object
 }
 
 console.log(typeof myFunction);
+
+
+
+//----------------------------***--------------------------//
+
+// Stack (Primitive),  Heap(Non-Primitive)
+
+let myYoutubename = "Harshdeepsinghdotcom"
+
+let anothername = myYoutubename
+anothername = "chaiaurcode"
+
+// In Stack there is copy so value do not change
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "harsh@google.com"
+
+// In Heap the value comes direct from refrence so value changes
+
+console.log(userOne.email);
+console.log(userTwo.email);
