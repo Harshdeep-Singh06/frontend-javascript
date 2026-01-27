@@ -1,8 +1,7 @@
-// singleton
-
-// object literals
+// singleton example
 
 const mySym = Symbol("key1")
+
 const JsUser = {
     name: "Harsh",
     "full name": "Harshdeep Singh",
@@ -11,27 +10,27 @@ const JsUser = {
     location: "Rajpura",
     email: "harsh@icloud.com",
     isLoggedIn: false,
-    lastLoginDays: ["Sunday","Monday"]
+    lastLoginDays: ["Sunday", "Monday"]
 }
 
-// console.log(JsUser.email);
-// console.log(JsUser["email"]);
-// console.log(JsUser["full name"]);
-// console.log(typeof JsUser.mySym);
-// console.log(Jsuser[mySym]);
-
+// change email
 JsUser.email = "harsh2026@icloud.com"
-Object.freeze(JsUser)
-JsUser.email = "harsh2030@icloud.com"
-// console.log(JsUser);
 
-JsUser.greeting = function(){
+// add functions BEFORE freeze
+JsUser.greeting = function () {
     console.log("Hello Sir");
 }
 
-JsUser.greetingTwo = function(){
+JsUser.greetingTwo = function () {
     console.log(`Hello MF!, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+// freeze object
+Object.freeze(JsUser)
+
+// try to change (won't work)
+JsUser.email = "harsh2030@icloud.com"
+
+// call functions
+JsUser.greeting()
+JsUser.greetingTwo()
