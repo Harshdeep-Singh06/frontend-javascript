@@ -19,8 +19,12 @@
 
 // user.greet();
 
-let person = {
-    name: "Harsh",
-    age: 19
+// let person = {
+//     name: "Harsh",
+//     age: 19
+// }
+// console.log(Object.entries(person));
+
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
 }
-console.log(Object.entries(person));
